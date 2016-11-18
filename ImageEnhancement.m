@@ -1,6 +1,6 @@
-#Clear the Console
+%Clear the Console
 clc;
-#Delete All Memory Variables/Close All Windows
+%Delete All Memory Variables/Close All Windows
 clear all;
 close all;
 
@@ -12,7 +12,7 @@ close all;
   2- Contrast Adjustment - using imadjust()
   
 %}
-# Using the Histogram Equalization 
+% Using the Histogram Equalization 
 
 %{
     1- Read Image (RGB)
@@ -27,27 +27,23 @@ x = imread('mi.jpg');
 x = im2double(x);
 x_gs = rgb2gray(x);
 
-#use Subplot to show multiple images at on figure
+%use Subplot to show multiple images at on figure
 subplot(1,2,1);
 imshow(x_gs);
-title("Original GrayScale Image")
+title('Original GrayScale Image')
 
 subplot(1,2,2);
 x_gs_eq = histeq(x_gs);
 imshow(x_gs_eq);
-title("Image After Histogram Equalization")
+title('Image After Histogram Equalization')
 
 figure;
 
-#Show Histogram for Both Image Before and After Adjustment
+%Show Histogram for Both Image Before and After Adjustment
 subplot(1,2,1);
 hist(x_gs);
-title("Histogram Before Equalization")
+title('Histogram Before Equalization')
 
 subplot(1,2,2);
 hist(x_gs_eq);
-title("Histogram After Equalization");
-
-
-
-
+title('Histogram After Equalization');

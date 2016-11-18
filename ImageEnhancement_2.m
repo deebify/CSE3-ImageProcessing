@@ -1,6 +1,6 @@
-#Clear the Console
+%Clear the Console
 clc;
-#Delete All Memory Variables/Close All Windows
+%Delete All Memory Variables/Close All Windows
 clear all;
 close all;
 
@@ -12,7 +12,7 @@ close all;
   2- Contrast Adjustment - using imadjust()
   
 %}
-# Using the Contrast Adjustment 
+% Using the Contrast Adjustment 
 
 %{
     1- Read Image (RGB)
@@ -25,32 +25,28 @@ pkg load image;
 x = imread('mi.jpg');
 x = im2double(x);
 
-#use Subplot to show multiple images at on figure
+%use Subplot to show multiple images at on figure
 
 subplot(1,2,1);
 imshow(x);
 title('Original RGB Image')
 
 subplot(1,2,2);
-#get adjusted image
+%get adjusted image
 x_adj = imadjust(x);
 imshow(x_adj);
-title("Auto-Adjusted Image")
+title('Auto-Adjusted Image')
 
 
-#Show Histogram for Both Image Before and After Adjustment
+%Show Histogram for Both Image Before and After Adjustment
 figure;
 subplot(1,2,1);
-#Get GrayScale, Show Histogram
+%Get GrayScale, Show Histogram
 x_gs = rgb2gray(x);
 hist(x_gs);
-title("Histogram Before Adjustment")
+title('Histogram Before Adjustment')
 
 subplot(1,2,2);
 x_gs_adj = rgb2gray(x_adj);
 hist(x_gs_adj);
-title("Histogram After Adjustment");
-
-
-
-
+title('Histogram After Adjustment');
