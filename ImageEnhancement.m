@@ -23,7 +23,7 @@ close all;
     4- Show Histogram for Both Original and Adjusted Image
 %}
 pkg load image;
-x = imread('mi.jpg');
+x = imread('aj.jpeg');
 x = im2double(x);
 x_gs = rgb2gray(x);
 
