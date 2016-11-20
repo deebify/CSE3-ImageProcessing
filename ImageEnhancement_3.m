@@ -39,7 +39,7 @@ subplot(1,2,2);
 % If high_out is less than low_out, imadjust reverses the output image, as in a photographic negative.
 x_adj = imadjust(x,[0.3 0.5],[]); 
 imshow(x_adj);imshow(x_adj);
-title("Range Adjusted Image")
+title('Range Adjusted Image')
 
 
 %Show Histogram for Both Image Before and After Adjustment
@@ -48,12 +48,12 @@ subplot(1,2,1);
 %Get GrayScale, Show Histogram
 x_gs = rgb2gray(x);
 hist(x_gs);
-title("Histogram Before Adjustment")
+title('Histogram Before Adjustment')
 
 subplot(1,2,2);
 x_gs_adj = rgb2gray(x_adj);
 hist(x_gs_adj);
-title("Histogram After Adjustment");
+title('Histogram After Adjustment');
 
 
 %% THE GAMMA Transformation
