@@ -109,7 +109,3 @@ im_f = imfilter(im,filter);
 subplot(1,2,2);
 imshow(im_f);
 title('Gaussian Filter Image');
-
-
-
-
