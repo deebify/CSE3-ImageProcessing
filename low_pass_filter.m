@@ -67,7 +67,7 @@ subplot(1,2,1);
 imshow(img_2D); 
 title("Original 2D Image")
 
-filtered = imfilter(img_2D,filter);%boundary option, output size -- ,'replicate','same'
+filtered = imfilter(img_2D,filter,'replicate');%boundary option, output size -- ,'replicate','same'
 
 subplot(1,2,2);
 imshow(filtered);

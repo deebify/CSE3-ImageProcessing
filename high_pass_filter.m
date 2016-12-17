@@ -53,14 +53,14 @@ kernel = [
         -1 -1 -1
       ]; 
 % use can change the kernel factor 3 or 9 to contorl filter
-filter = (1/9) * kernel; 
+filter = (1/3) * kernel; 
 
 figure;
 subplot(1,2,1);
 imshow(img_2D); 
 title("Original 2D Image")
 
-filtered = imfilter(img_2D,filter);%boundary option, output size -- ,'replicate','same'
+filtered = imfilter(img_2D,filter,'replicate','same');%boundary option, output size -- ,'replicate','same'
 
 subplot(1,2,2);
 imshow(filtered);
