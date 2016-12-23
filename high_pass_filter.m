@@ -79,6 +79,3 @@ title("After High Pass Filter on 2D Image")
     Can be used to detect the edges 
     becasue the edges is a high transistion from pixel to another.   
    %}
-
-
-
